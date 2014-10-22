@@ -12,10 +12,6 @@ import Keys._
 import sbt.BuildLoader.BuildInfo
 import org.scalastyle.sbt.ScalastylePlugin.scalastyleConfigUrl
 
-/**
- *   The main entry point for Clueda Common Plugin.
- *    </ul>
- */
 object SbtCustomsettings extends AutoPlugin {
 
   // reference documentation on plugins: http://www.scala-sbt.org/0.13/docs/Plugins.html
