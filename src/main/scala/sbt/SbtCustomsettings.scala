@@ -12,6 +12,9 @@ import Keys._
 import sbt.BuildLoader.BuildInfo
 import org.scalastyle.sbt.ScalastylePlugin.scalastyleConfigUrl
 
+import com.typesafe.sbt.SbtNativePackager._
+import com.typesafe.sbt.SbtNativePackager.NativePackagerKeys._
+
 object SbtCustomsettings extends AutoPlugin {
 
   // reference documentation on plugins: http://www.scala-sbt.org/0.13/docs/Plugins.html
@@ -33,7 +36,7 @@ object SbtCustomsettings extends AutoPlugin {
     // this setting is not seen by projects using this plugin
     scalastyleConfigUrl := Some(url("http://git.clueda-dev/meta/clueda_style/raw/master/clueda_scalastyle-config.xml"))
     ,
-    // these settings are visible to projects
+    // these settings are all visible to projects
     publishMavenStyle := true
     ,
     publishTo <<= version { v: String =>
@@ -43,6 +46,8 @@ object SbtCustomsettings extends AutoPlugin {
       else
         Some("releases" at artifactory + "/libs-release-local")
     }
+    ,
+    maintainer := "John Smith <john.smith@example.com>"
   )
 
 }
