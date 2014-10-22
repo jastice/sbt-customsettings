@@ -5,7 +5,7 @@
  * circumstances without the express prior written permission of Clueda
  * AG. All rights reserved.
  */
-package com.clueda.sbt
+package sbt
 
 import sbt._
 import Keys._
